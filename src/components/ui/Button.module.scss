@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  color: #333333;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  background-color: #f4ce14;
+  border: 1px solid #f4ce14;
+  border-radius: 10rem;
+  padding: 0.5rem 1.75rem;
+  text-align: center;
+
+  &:hover {
+    background-color: #ccac0f;
+    border-color: #ccac0f;
+  }
+}
