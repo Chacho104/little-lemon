@@ -1,0 +1,16 @@
+.hero {
+  margin: 3rem auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero {
+    margin: 1.5rem auto;
+  }
+}
