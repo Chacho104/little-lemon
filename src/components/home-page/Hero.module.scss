@@ -1,0 +1,84 @@
+.hero-section {
+  background-color: #495e57;
+  height: 27rem;
+  margin-bottom: 8rem;
+
+  .hero {
+    height: 100%;
+    display: flex;
+
+    .content {
+      width: 70%;
+      margin-top: 3.5rem;
+
+      h1 {
+        color: #f4ce14;
+        font-family: "Markazi Text", serif;
+        font-size: 4rem;
+      }
+
+      h2 {
+        color: #ffffff;
+        font-family: "Markazi Text", serif;
+        font-size: 2.5rem;
+      }
+
+      p {
+        width: 80%;
+        color: #ffffff;
+        font-family: "Karla", sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        margin: 0.5rem 0 2rem 0;
+      }
+    }
+  }
+  .image {
+    width: 30%;
+    margin-top: 3.5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .hero-section {
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .image {
+    display: none;
+  }
+
+  .hero-section {
+    .hero {
+      .content {
+        width: 100%;
+        text-align: center;
+
+        p {
+          width: 100%;
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-section {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .hero-section {
+    height: 33rem;
+  }
+}
