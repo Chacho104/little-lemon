@@ -1,0 +1,173 @@
+.about {
+  h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: #495e57;
+    text-align: center;
+  }
+
+  .description {
+    margin-bottom: 4rem;
+    text-align: center;
+
+    p {
+      line-height: 1.75;
+      font-size: 1.15rem;
+      color: #333;
+
+      a {
+        color: #495e57;
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+
+        &:hover {
+          color: #f4ce14;
+        }
+      }
+    }
+  }
+
+  .branch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    img {
+      width: 28rem;
+      height: 34rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .content {
+    width: 30rem;
+    height: auto;
+    max-height: 34rem;
+    padding: 2rem;
+    line-height: 1.5;
+    font-size: 1.125rem;
+    border: 2px solid #495e57;
+    border-radius: 1.5rem;
+
+    h2 {
+      color: #495e57;
+    }
+
+    p {
+      padding: 0.75rem 0;
+    }
+
+    .contact {
+      .contact-item {
+        margin: 0.5rem 0;
+      }
+
+      .icon {
+        color: #495e57;
+        font-size: 1.25rem;
+        margin-right: 0.4rem;
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 1.025rem;
+      }
+    }
+  }
+
+  .team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    .member {
+      border: 1px solid #333;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      width: 18rem;
+      height: auto;
+      min-height: 27rem;
+
+      img {
+        width: 100%;
+        height: 21rem;
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+      }
+
+      h3 {
+        padding: 1rem 1.5rem;
+      }
+
+      p {
+        padding: 0 1.5rem;
+        color: #495e57;
+      }
+
+      &:hover {
+        border: 1px solid #495e57;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .about {
+    .description {
+      p {
+        padding: 0 3.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .about {
+    .branch {
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    #reverse {
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .about {
+    .team {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    .description {
+      p {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .about {
+    .branch {
+      width: 95%;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
