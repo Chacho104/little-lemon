@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import DropMenu from "./DropMenu";
-import classes from "./Navabar.module.scss";
+import classes from "./Navbar.module.scss";
 import BasketIcon from "../basket/BasketIcon";
 
 const Navbar: React.FC = () => {
