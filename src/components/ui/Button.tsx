@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ link, children, onClick }) => {
     );
   }
   return (
-    <button onClick={onClick} className={classes.btn}>
+    <button type="submit" onClick={onClick} className={classes.btn}>
       {children}
     </button>
   );
