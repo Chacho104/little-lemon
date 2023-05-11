@@ -1,0 +1,26 @@
+.hero {
+  background-image: url("/images/restaurant.jpg");
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 5rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .overlay {
+    background-image: linear-gradient(180deg, #000000 0%, #0000003c 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 5rem);
+  }
+
+  .content {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
