@@ -1,0 +1,115 @@
+.form-input {
+  background-color: #495e57;
+  height: auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .control {
+      margin: 1rem 0;
+
+      label {
+        color: #fff;
+        font-size: 1.25rem;
+      }
+
+      .input {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        width: 20rem;
+
+        select {
+          width: 12.5rem;
+          border: none;
+          outline: none;
+          font-size: 1rem;
+          color: #495e57;
+          cursor: pointer;
+        }
+
+        input {
+          display: flex;
+          align-items: center;
+          color: #495e57;
+          border: 0.25px solid #495e57;
+          border-radius: 0.5rem;
+          padding: 0 0.5rem;
+          cursor: pointer;
+
+          &:focus {
+            border: 1px solid #495e57;
+            outline: none;
+          }
+        }
+
+        svg {
+          font-size: 2rem;
+          color: #495e57;
+        }
+      }
+    }
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    .label {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      color: #fff;
+      margin: 0 1rem;
+
+      input[type="radio"] {
+        margin-right: 0.5rem;
+        accent-color: #495e57;
+      }
+    }
+  }
+}
+
+.action {
+  height: auto;
+  padding: 3rem 0;
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      img {
+        border-radius: 1.5rem;
+      }
+    }
+  }
+
+  .act {
+    display: flex;
+    justify-content: center;
+  }
+}
