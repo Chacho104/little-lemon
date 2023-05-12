@@ -1,4 +1,4 @@
-import { Field, useFormikContext } from "formik";
+import { ErrorMessage, Field, useFormikContext } from "formik";
 import React from "react";
 import { GiAlarmClock } from "react-icons/gi";
 import classes from "./TimeOptions.module.scss";
@@ -43,6 +43,9 @@ const TimeOptions: React.FC = () => {
             ))}
           </Field>
         </div>
+        <ErrorMessage name="time">
+          {(msg) => <div className={classes.error}>{msg}</div>}
+        </ErrorMessage>
       </div>
     </div>
   );
