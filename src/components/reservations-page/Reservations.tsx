@@ -13,13 +13,21 @@ const Reservations: React.FC = () => {
     lastName: "",
     email: "",
     phone: "",
-    specialReq: "",
   });
 
   const [currentStep, setCurrentStep] = useState(0);
 
-  const handleNextStep = (newData: any) => {
+  const makeRequest = (allFormData: any) => {
+    console.log("Form submitted", allFormData);
+  };
+
+  const handleNextStep = (newData: any, final: boolean = false) => {
     setFormData((prev) => ({ ...prev, ...newData }));
+
+    if (final) {
+      makeRequest(newData);
+      return;
+    }
     setCurrentStep((prev) => prev + 1);
   };
 
@@ -40,11 +48,15 @@ const Reservations: React.FC = () => {
     <StepTwo
       next={handleNextStep}
       prev={handlePrevStep}
+      date={formData.date}
+      noOfDiners={formData.noOfDiners}
+      occasion={formData.occasion}
+      time={formData.time}
+      seatingArea={formData.seatingArea}
       firstName={formData.firstName}
       lastName={formData.lastName}
       phone={formData.phone}
       email={formData.email}
-      specialReq={formData.specialReq}
     />,
   ];
 
