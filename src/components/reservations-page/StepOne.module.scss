@@ -1,18 +1,33 @@
 .form-input {
   background-color: #495e57;
   height: auto;
-  padding: 3rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
+  h1 {
+    color: #f4ce14;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
   .controls {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
+
+    @media screen and (max-width: 690px) {
+      gap: 0;
+    }
 
     .control {
       margin: 1rem 0;
+
+      @media screen and (max-width: 690px) {
+        margin: 0.5rem 0;
+      }
 
       label {
         color: #fff;
@@ -54,9 +69,15 @@
         }
 
         svg {
-          font-size: 2rem;
+          font-size: 1.75rem;
           color: #495e57;
         }
+      }
+
+      .error {
+        color: #f4ce14;
+        width: 20rem;
+        padding: 0.5rem 0;
       }
     }
   }
@@ -82,12 +103,21 @@
         accent-color: #495e57;
       }
     }
+
+    .error {
+      color: #f4ce14;
+      padding: 0.5rem 0;
+    }
   }
 }
 
 .action {
   height: auto;
-  padding: 3rem 0;
+  padding: 2rem 0;
+
+  @media screen and (max-width: 690px) {
+    background-color: #495e57;
+  }
 
   .content {
     height: 100%;
@@ -101,6 +131,10 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
+
+      @media screen and (max-width: 690px) {
+        display: none;
+      }
 
       img {
         border-radius: 1.5rem;
