@@ -44,6 +44,10 @@ const Reservations: React.FC = () => {
       occasion={formData.occasion}
       time={formData.time}
       seatingArea={formData.seatingArea}
+      firstName={formData.firstName}
+      lastName={formData.lastName}
+      phone={formData.phone}
+      email={formData.email}
     />,
     <StepTwo
       next={handleNextStep}
