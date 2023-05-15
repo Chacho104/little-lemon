@@ -21,7 +21,7 @@ const AboutBrief: React.FC = () => {
       <div className={classes["owners-img"]}>
         <div className={classes.firstImage}>
           <Image
-            src="/images/owners1.jpg"
+            src="/images/site/owners1.jpg"
             alt="Mario and Adrian"
             width={288}
             height={352}
@@ -29,7 +29,7 @@ const AboutBrief: React.FC = () => {
         </div>
         <div className={classes.secondImage}>
           <Image
-            src="/images/owners2.jpg"
+            src="/images/site/owners2.jpg"
             alt="Mario and Adrian"
             width={288}
             height={352}
