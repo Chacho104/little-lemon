@@ -28,7 +28,7 @@ const About: React.FC = () => {
       <div className={classes.branch} id={classes.reverse}>
         <div>
           <Image
-            src="/images/restaurant.jpg"
+            src="/images/site/restaurant.jpg"
             alt="Little Lemon Restaraunt at 11th Street"
             width={448}
             height={544}
@@ -76,7 +76,7 @@ const About: React.FC = () => {
         </div>
         <div>
           <Image
-            src="/images/chicago2.jpg"
+            src="/images/site/chicago2.jpg"
             alt="Little Lemon Restaraunt at 13th Street"
             width={448}
             height={544}
@@ -87,7 +87,7 @@ const About: React.FC = () => {
       <div className={classes.team}>
         <div className={classes.member}>
           <Image
-            src="/images/mario.jpg"
+            src="/images/site/mario.jpg"
             alt="Co-founder Mario Stefano"
             width={288}
             height={336}
@@ -97,7 +97,7 @@ const About: React.FC = () => {
         </div>
         <div className={classes.member}>
           <Image
-            src="/images/adrian.jpg"
+            src="/images/site/adrian.jpg"
             alt="Co-founder Adrian Demphris"
             width={288}
             height={336}
@@ -107,7 +107,7 @@ const About: React.FC = () => {
         </div>
         <div className={classes.member}>
           <Image
-            src="/images/headchef2.jpg"
+            src="/images/site/headchef2.jpg"
             alt="Head of Operations"
             width={288}
             height={336}
