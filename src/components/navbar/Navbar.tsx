@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
       <header className={classes.header}>
         <nav className={classes.nav}>
           <span>
-            <img src="/images/Logo.svg" alt="Little Lemon logo" />
+            <img src="/images/site/Logo.svg" alt="Little Lemon logo" />
           </span>
           <ul>
             <li>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
             {toggleMenu && <DropMenu onClick={closeDropMenu} />}
           </span>
           <span>
-            <img src="/images/Logo.svg" alt="Little Lemon Logo" />
+            <img src="/images/site/Logo.svg" alt="Little Lemon Logo" />
           </span>
           <span>
             <BasketIcon />
