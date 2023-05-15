@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <nav className={classes.bottNav}>
           <section className={classes.logo}>
             <Link href="/">
-              <img src="/images/Logo.svg" alt="Little Lemon Logo" />
+              <img src="/images/site/Logo.svg" alt="Little Lemon Logo" />
             </Link>
           </section>
           <section className={classes.item}>
