@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           <Button link="/reservations">Reserve a Table</Button>
         </div>
         <div className={classes.image}>
-          <img src="/images/restauranfood.jpg" alt="Little Lemon Chef" />
+          <img src="/images/site/restauranfood.jpg" alt="Little Lemon Chef" />
         </div>
       </section>
     </main>
