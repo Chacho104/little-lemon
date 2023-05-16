@@ -6,10 +6,6 @@
   border: 1px solid #333;
   border-radius: 2rem;
 
-  //   @media screen and (max-width: 690px) {
-  //     margin: 2rem 1rem;
-  //   }
-
   .image {
     width: 100%;
     height: auto;
@@ -51,7 +47,11 @@
   }
 
   .details {
-    padding: 1.5rem 2rem 0rem 2rem;
+    padding: 1.5rem 2rem 0rem;
+
+    @media screen and (max-width: 690px) {
+      padding: 1.5rem 1rem 0rem;
+    }
 
     h2 {
       margin-bottom: 0.75rem;
