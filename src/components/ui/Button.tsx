@@ -5,12 +5,19 @@ import Link from "next/link";
 
 type ButtonProps = {
   type?: "button" | "submit" | "reset" | undefined;
+  variant?: string;
   link?: string;
   children: any;
   onClick?: MouseEventHandler;
 };
 
-const Button: React.FC<ButtonProps> = ({ type, link, children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  type,
+  variant,
+  link,
+  children,
+  onClick,
+}) => {
   if (link) {
     return (
       <Link href={link} className={classes.btn}>
@@ -18,6 +25,15 @@ const Button: React.FC<ButtonProps> = ({ type, link, children, onClick }) => {
       </Link>
     );
   }
+
+  if (variant) {
+    return (
+      <button type={type} onClick={onClick} className={classes.formbtn}>
+        {children}
+      </button>
+    );
+  }
+
   return (
     <button type={type} onClick={onClick} className={classes.btn}>
       {children}
