@@ -3,17 +3,21 @@ import classes from "./MenuItemDetails.module.scss";
 import { BsArrowLeft } from "react-icons/bs";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import ButtonAlt from "../ui/ButtonAlt";
+import MenuItemForm from "./MenuItemForm";
 
 type MenuItemDetailsProps = {
   title: string;
   description: string;
   image: string;
+  id: string;
 };
 
 const MenuItemDetails: React.FC<MenuItemDetailsProps> = ({
   title,
   description,
   image,
+  id,
 }) => {
   const router = useRouter();
 
@@ -34,6 +38,10 @@ const MenuItemDetails: React.FC<MenuItemDetailsProps> = ({
         <div className={classes.details}>
           <h2>{title}</h2>
           <p>{description}</p>
+          <ButtonAlt />
+        </div>
+        <div className={classes.customize}>
+          <MenuItemForm id={id} />
         </div>
       </div>
     </section>
