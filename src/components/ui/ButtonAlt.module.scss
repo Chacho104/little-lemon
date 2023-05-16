@@ -1,0 +1,42 @@
+.delivery {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #edefee;
+
+  .time {
+    width: 50%;
+    display: flex;
+
+    svg {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+      color: #495e57;
+    }
+  }
+
+  .time-only {
+    display: flex;
+
+    svg {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+      color: #495e57;
+    }
+  }
+
+  a {
+    border: 1px solid #495e57;
+    border-radius: 2rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #edefee;
+    color: #495e57;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
