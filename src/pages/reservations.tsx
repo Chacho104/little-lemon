@@ -1,7 +1,7 @@
 import Reservations from "@/components/reservations-page/Reservations";
 import React from "react";
 
-const reservations: React.FC = () => {
+const ReservationsPage = () => {
   return <Reservations />;
 };
-export default reservations;
+export default ReservationsPage;
