@@ -6,8 +6,27 @@
   font-size: 1.25rem;
   background-color: #f4ce14;
   border: 1px solid #f4ce14;
-  border-radius: 0.5rem;
+  border-radius: 10rem;
   padding: 0.5rem 1.75rem;
+  text-align: center;
+
+  &:hover {
+    background-color: #ccac0f;
+    border-color: #ccac0f;
+  }
+}
+
+.formbtn {
+  cursor: pointer;
+  color: #333333;
+  font-family: "Karla", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #f4ce14;
+  border: 1px solid #f4ce14;
+  border-radius: 10rem;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
   text-align: center;
 
   &:hover {
