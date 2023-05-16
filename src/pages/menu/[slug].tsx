@@ -82,6 +82,7 @@ const mealDetailsPage = ({
       {selectedMeal.map((meal: any) => (
         <MenuItemDetails
           key={meal._id}
+          id={meal._id}
           title={meal.title}
           description={meal.description}
           image={meal.image}
