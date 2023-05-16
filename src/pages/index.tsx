@@ -4,11 +4,13 @@ import AboutBrief from "@/components/home-page/AboutBrief";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
       <Hero />
       <AboutBrief />
     </>
   );
-}
+};
+
+export default HomePage;
