@@ -1,9 +1,9 @@
 import Link from "next/link";
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import classes from "./DropMenu.module.scss";
 
 type DropMenuProps = {
-  onClick: MouseEventHandler;
+  onClick: () => void;
 };
 
 const DropMenu: React.FC<DropMenuProps> = ({ onClick }) => {
