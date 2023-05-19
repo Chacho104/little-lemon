@@ -15,7 +15,7 @@ const Reservations: React.FC = () => {
     phone: "",
   });
 
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState<number>(0);
 
   const makeRequest = (allFormData: any) => {
     console.log("Form submitted", allFormData);
