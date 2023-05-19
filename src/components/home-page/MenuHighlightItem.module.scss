@@ -1,0 +1,52 @@
+.meal-image {
+  img {
+    width: 19rem;
+    height: 15rem;
+    border-top-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+
+  h3 {
+    color: #f4ce14;
+  }
+
+  p {
+    color: #ee9972;
+  }
+}
+
+.description {
+  padding: 0 1.25rem 1rem;
+  color: #fff;
+}
+
+.action {
+  padding: 0 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    color: #f4ce14;
+
+    &:hover {
+      color: #ccac0f;
+    }
+  }
+
+  svg {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #f4ce14;
+  }
+}
