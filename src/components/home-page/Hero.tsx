@@ -14,7 +14,9 @@ const Hero: React.FC = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Button link="/reservations">Reserve a Table</Button>
+          <Button type="button" link="/reservations">
+            Reserve a Table
+          </Button>
         </div>
         <div className={classes.image}>
           <img src="/images/site/restauranfood.jpg" alt="Little Lemon Chef" />
