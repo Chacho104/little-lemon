@@ -5,9 +5,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import DropMenu from "./DropMenu";
 import classes from "./Navbar.module.scss";
 import BasketIcon from "../basket/BasketIcon";
+import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
+  const router = useRouter();
 
   function closeDropMenu() {
     setToggleMenu(false);
@@ -24,22 +27,54 @@ const Navbar: React.FC = () => {
           </span>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                href="/"
+                className={router.pathname === "/" ? classes.active : ""}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link
+                href="/about"
+                className={router.pathname === "/about" ? classes.active : ""}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/menu">Menu</Link>
+              <Link
+                href="/menu"
+                className={router.pathname === "/menu" ? classes.active : ""}
+              >
+                Menu
+              </Link>
             </li>
             <li>
-              <Link href="/reservations">Reservations</Link>
+              <Link
+                href="/reservations"
+                className={
+                  router.pathname === "/reservations" ? classes.active : ""
+                }
+              >
+                Reservations
+              </Link>
             </li>
             <li>
-              <Link href="/login">Log In</Link>
+              <Link
+                href="/login"
+                className={router.pathname === "/login" ? classes.active : ""}
+              >
+                Log In
+              </Link>
             </li>
             <li>
-              <Link href="/signup">Sign Up</Link>
+              <Link
+                href="/signup"
+                className={router.pathname === "/signup" ? classes.active : ""}
+              >
+                Sign Up
+              </Link>
             </li>
           </ul>
           <span>
