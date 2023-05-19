@@ -1,4 +1,4 @@
-import MenuDisplay from "@/components/menu-page/MenuDisplay";
+import MenuDisplay from "@/components/menu-page/menu-markup/MenuDisplay";
 import PageHero from "@/components/ui/PageHero";
 import React from "react";
 import { InferGetStaticPropsType, GetStaticProps } from "next";
@@ -12,6 +12,7 @@ type Meal = {
   isFeatured: boolean;
   price: number;
   title: string;
+  slug: string;
 };
 
 export const getStaticProps: GetStaticProps<{ meals: Meal[] }> = async () => {
