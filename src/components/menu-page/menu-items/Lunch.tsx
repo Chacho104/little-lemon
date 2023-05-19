@@ -2,7 +2,16 @@ import React from "react";
 import MenuItemsList from "../menu-markup/MenuItemsList";
 
 type LunchProps = {
-  meals: any[];
+  meals: {
+    _id: string;
+    category: string;
+    title: string;
+    price: number;
+    isFeatured: boolean;
+    description: string;
+    slug: string;
+    image: string;
+  }[];
 };
 
 const Lunch: React.FC<LunchProps> = ({ meals }) => {
