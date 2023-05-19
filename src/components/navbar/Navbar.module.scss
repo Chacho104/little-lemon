@@ -35,7 +35,8 @@
         font-size: 1.6rem;
 
         &:hover,
-        &:active {
+        &:active,
+        &.active {
           color: #f4ce14;
           text-decoration: underline;
           text-underline-offset: 0.4rem;
