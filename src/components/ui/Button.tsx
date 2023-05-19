@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 
 import classes from "./Button.module.scss";
 import Link from "next/link";
@@ -8,7 +8,7 @@ type ButtonProps = {
   variant?: string;
   link?: string;
   children: any;
-  onClick?: MouseEventHandler;
+  onClick?: () => void;
 };
 
 const Button: React.FC<ButtonProps> = ({
