@@ -194,7 +194,7 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
                       props.prev(values);
                     }}
                   >
-                    Edit Reservation
+                    Change Reservation
                   </Button>
                   <Button type="submit">Confirm Reservation</Button>
                 </div>
