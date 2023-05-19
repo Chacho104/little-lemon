@@ -1,4 +1,4 @@
-import MenuItemDetails from "@/components/menu-page/MenuItemDetails";
+import MenuItemDetails from "@/components/menu-page/menu-markup/MenuItemDetails";
 import { connectDatabase, getAllDocuments } from "@/helpers/db-util";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import { ParsedUrlQuery } from "querystring";
@@ -7,6 +7,17 @@ import React from "react";
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
+
+type Meal = {
+  _id: string;
+  category: string;
+  description: string;
+  image: string;
+  isFeatured: boolean;
+  price: number;
+  title: string;
+  slug: string;
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const client = await connectDatabase();
@@ -27,7 +38,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     throw new Error("Could not fetch data from the database!");
   }
 
-  const meals = JSON.parse(JSON.stringify(res));
+  const meals: Meal[] = JSON.parse(JSON.stringify(res));
 
   client.close();
 
@@ -39,7 +50,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<{ meal: Meal[] }> = async (
+  context
+) => {
   const { slug } = context.params as IParams;
 
   const client = await connectDatabase();
@@ -62,30 +75,31 @@ export const getStaticProps: GetStaticProps = async (context) => {
     );
   }
 
-  const meal = JSON.parse(JSON.stringify(res));
+  const meal: Meal[] = JSON.parse(JSON.stringify(res));
 
   client.close();
 
   return {
     props: {
-      selectedMeal: meal,
+      meal,
     },
     revalidate: 30,
   };
 };
 
 const mealDetailsPage = ({
-  selectedMeal,
+  meal,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      {selectedMeal.map((meal: any) => (
+      {meal.map((meal: any) => (
         <MenuItemDetails
           key={meal._id}
           id={meal._id}
           title={meal.title}
           description={meal.description}
           image={meal.image}
+          price={meal.price}
         />
       ))}
     </>
