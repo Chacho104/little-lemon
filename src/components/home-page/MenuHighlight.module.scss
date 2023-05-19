@@ -1,0 +1,47 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+
+    .action {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #495e57;
+    text-align: center;
+  }
+
+  p {
+    color: #495e57;
+    text-align: center;
+    line-height: 1.75;
+    font-size: 1.15rem;
+    padding: 0 1rem;
+    display: none;
+
+    @media screen and (max-width: 960px) {
+      display: block;
+      padding-top: 1rem;
+    }
+
+    a {
+      color: #495e57;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+
+      &:hover {
+        color: #f4ce14;
+      }
+    }
+  }
+}
+
+.highlights {
+  margin-top: 4rem;
+}
