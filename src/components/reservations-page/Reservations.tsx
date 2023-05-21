@@ -13,6 +13,7 @@ const Reservations: React.FC = () => {
     lastName: "",
     email: "",
     phone: "",
+    userAgreement: "",
   });
 
   const [currentStep, setCurrentStep] = useState<number>(0);
@@ -48,6 +49,7 @@ const Reservations: React.FC = () => {
       lastName={formData.lastName}
       phone={formData.phone}
       email={formData.email}
+      userAgreement={formData.userAgreement}
     />,
     <StepTwo
       next={handleNextStep}
@@ -61,6 +63,7 @@ const Reservations: React.FC = () => {
       lastName={formData.lastName}
       phone={formData.phone}
       email={formData.email}
+      userAgreement={formData.userAgreement}
     />,
   ];
 
