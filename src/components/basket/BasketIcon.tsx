@@ -35,8 +35,8 @@ const BasketIcon: React.FC = () => {
   return (
     <nav className={navClasses}>
       <Link
-        href="/basket"
-        className={router.pathname === "/basket" ? classes.active : ""}
+        href="/checkout"
+        className={router.pathname === "/checkout" ? classes.active : ""}
       >
         <svg
           width="46"
