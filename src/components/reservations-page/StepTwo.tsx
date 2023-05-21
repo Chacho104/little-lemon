@@ -1,4 +1,4 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Form, Formik } from "formik";
 import React from "react";
 import classes from "./StepTwo.module.scss";
 import Image from "next/image";
@@ -8,6 +8,8 @@ import { BsPerson } from "react-icons/bs";
 import { FaGlassCheers } from "react-icons/fa";
 import { GiAlarmClock, GiTabletopPlayers } from "react-icons/gi";
 import * as Yup from "yup";
+import TextInput from "../inputs/CustomInput";
+import RadioCustomInput from "../inputs/RadioCustomInput";
 
 type StepTwoProps = {
   next: any;
@@ -21,6 +23,7 @@ type StepTwoProps = {
   lastName: string;
   email: string;
   phone: string;
+  userAgreement: string;
 };
 
 const StepTwo: React.FC<StepTwoProps> = (props) => {
@@ -40,6 +43,7 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
           lastName: props.lastName,
           email: props.email,
           phone: props.phone,
+          userAgreement: props.userAgreement,
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
@@ -56,6 +60,7 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
             .min(10, "Phone number must be at least 10 digits")
             .max(10, "Phone number must be at most 10 digits")
             .required("Please enter your phone number"),
+          userAgreement: Yup.string().required("This field is required"),
         })}
         onSubmit={(values) => {
           props.next(values, true);
@@ -64,99 +69,86 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
         {({ values }) => (
           <Form>
             <div className={classes["form-input"]}>
-              <div className={classes["prev-data"]}>
-                <div className={classes.data}>
-                  <HiOutlineCalendar />
-                  <p>{props.date}</p>
+              {/* Data from previous step */}
+
+              <div className={classes["order-details"]}>
+                <div className={classes["prev-data"]}>
+                  <div className={classes.data}>
+                    <HiOutlineCalendar />
+                    <p>{props.date}</p>
+                  </div>
+                  <div className={classes.data}>
+                    <BsPerson />
+                    <p>{props.noOfDiners}</p>
+                  </div>
                 </div>
-                <div className={classes.data}>
-                  <BsPerson />
-                  <p>{props.noOfDiners}</p>
+                <div className={classes["prev-data"]}>
+                  <div className={classes.data}>
+                    <FaGlassCheers />
+                    <p>{props.occasion}</p>
+                  </div>
+                  <div className={classes.data}>
+                    <GiAlarmClock />
+                    <p>{props.time} Hours</p>
+                  </div>
+                </div>
+                <div className={classes["prev-data"]}>
+                  <div className={classes.data}>
+                    <GiTabletopPlayers />
+                    <p>{props.seatingArea}</p>
+                  </div>
+                  <div className={classes.data}></div>
                 </div>
               </div>
-              <div className={classes["prev-data"]}>
-                <div className={classes.data}>
-                  <FaGlassCheers />
-                  <p>{props.occasion}</p>
-                </div>
-                <div className={classes.data}>
-                  <GiAlarmClock />
-                  <p>{props.time} Hours</p>
-                </div>
-              </div>
-              <div className={classes["prev-data"]}>
-                <div className={classes.data}>
-                  <GiTabletopPlayers />
-                  <p>{props.seatingArea}</p>
-                </div>
-                <div className={classes.data}></div>
+
+              {/* Form inputs start here */}
+
+              <div className={classes.controls}>
+                <TextInput
+                  bgcolor="green"
+                  label="First Name"
+                  name="firstName"
+                  id="first-name"
+                  placeholder="Enter your first name"
+                />
+                <TextInput
+                  bgcolor="green"
+                  label="Last Name"
+                  name="lastName"
+                  id="last-name"
+                  placeholder="Enter your last name"
+                />
               </div>
               <div className={classes.controls}>
-                <div className={classes.control}>
-                  <label htmlFor="first-name">First Name</label>
-                  <div className={classes.input}>
-                    <Field
-                      id="first-name"
-                      name="firstName"
-                      placeholder="First name"
-                    />
-                  </div>
-                  <ErrorMessage name="firstName">
-                    {(msg) => <div className={classes.error}>{msg}</div>}
-                  </ErrorMessage>
-                </div>
-                <div className={classes.control}>
-                  <label htmlFor="last-name">Last Name</label>
-                  <div className={classes.input}>
-                    <Field
-                      id="last-name"
-                      name="lastName"
-                      placeholder="Last name"
-                    />
-                  </div>
-                  <ErrorMessage name="lastName">
-                    {(msg) => <div className={classes.error}>{msg}</div>}
-                  </ErrorMessage>
-                </div>
-              </div>
-              <div className={classes.controls}>
-                <div className={classes.control}>
-                  <label htmlFor="email">Email</label>
-                  <div className={classes.input}>
-                    <Field
-                      id="email"
-                      name="email"
-                      placeholder="you@company.com"
-                    />
-                  </div>
-                  <ErrorMessage name="email">
-                    {(msg) => <div className={classes.error}>{msg}</div>}
-                  </ErrorMessage>
-                </div>
-                <div className={classes.control}>
-                  <label htmlFor="phone">Phone Number</label>
-                  <div className={classes.input}>
-                    <Field id="phone" name="phone" placeholder="Phone number" />
-                  </div>
-                  <ErrorMessage name="phone">
-                    {(msg) => <div className={classes.error}>{msg}</div>}
-                  </ErrorMessage>
-                </div>
+                <TextInput
+                  bgcolor="green"
+                  label="Email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+                <TextInput
+                  bgcolor="green"
+                  label="Phone Number"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                />
               </div>
               <div className={classes["radio-group"]}>
                 <div id="my-radio-group" className={classes.label}>
                   User Agreement
                 </div>
                 <div role="group" aria-labelledby="my-radio-group">
-                  <label>
-                    <Field
-                      type="radio"
-                      name="seatingArea"
-                      value="Indoor seating"
-                    />
-                    You agree to our friendly privacy policy
-                  </label>
+                  <RadioCustomInput
+                    name="userAgreement"
+                    children="You agree to our friendly privacy policy"
+                    value="Agreed to privacy policy"
+                  />
                 </div>
+                <ErrorMessage name="userAgreement">
+                  {(msg) => <div className={classes.error}>{msg}</div>}
+                </ErrorMessage>
               </div>
             </div>
             <div className={classes.action}>
