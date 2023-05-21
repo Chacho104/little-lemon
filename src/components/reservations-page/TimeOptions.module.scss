@@ -1,43 +1,14 @@
-.control {
-  margin: 1rem 0;
+.custom-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff;
 
-  @media screen and (max-width: 690px) {
-    margin: 0.5rem 0;
+  svg {
+    font-size: 1.75rem;
   }
 
-  label {
-    color: #fff;
+  span {
     font-size: 1.25rem;
-  }
-
-  .input {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    padding: 0.5rem 0.75rem;
-    margin-top: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    width: 20rem;
-
-    select {
-      width: 12.5rem;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      color: #495e57;
-      cursor: pointer;
-    }
-
-    svg {
-      font-size: 1.75rem;
-      color: #495e57;
-    }
-  }
-
-  .error {
-    color: #f4ce14;
-    width: 20rem;
-    padding: 0.5rem 0;
   }
 }
