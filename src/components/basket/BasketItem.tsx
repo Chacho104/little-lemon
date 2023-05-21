@@ -5,8 +5,8 @@ type BasketItemProps = {
   title: string;
   price: number;
   amount: number;
-  onRemove: any;
-  onAdd: any;
+  onRemove: () => void;
+  onAdd: () => void;
 };
 
 const BasketItem: React.FC<BasketItemProps> = (props) => {
@@ -20,8 +20,12 @@ const BasketItem: React.FC<BasketItemProps> = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={props.onRemove}>-</button>
-        <button onClick={props.onAdd}>+</button>
+        <button type="button" onClick={props.onRemove}>
+          -
+        </button>
+        <button type="button" onClick={props.onAdd}>
+          +
+        </button>
       </div>
     </li>
   );
