@@ -1,0 +1,52 @@
+.personal-details {
+  height: auto;
+  min-height: 48vh;
+  border-radius: 2rem;
+  border: 1px solid #495e57;
+  margin-top: 2rem;
+  padding: 1rem 1rem 2rem;
+
+  h1 {
+    color: #495e57;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem 0 0;
+  }
+
+  p {
+    padding: 1rem 0;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42rem;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @media screen and (max-width: 690px) {
+      gap: 0;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 42rem;
+    margin: 2rem auto 1rem;
+    gap: 2rem;
+
+    @media screen and (max-width: 690px) {
+      margin: 1rem auto;
+      width: auto;
+      justify-content: center;
+    }
+  }
+}
