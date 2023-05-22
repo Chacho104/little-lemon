@@ -6,6 +6,7 @@ import DropMenu from "./DropMenu";
 import classes from "./Navbar.module.scss";
 import BasketIcon from "../basket/BasketIcon";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -23,7 +24,12 @@ const Navbar: React.FC = () => {
       <header className={classes.header}>
         <nav className={classes.nav}>
           <Link href="/">
-            <img src="/images/site/Logo.svg" alt="Little Lemon logo" />
+            <Image
+              src="/images/site/Logo.svg"
+              alt="Little Lemon logo"
+              width={160}
+              height={160}
+            />
           </Link>
           <ul>
             <li>
@@ -97,7 +103,12 @@ const Navbar: React.FC = () => {
             {toggleMenu && <DropMenu onClick={closeDropMenu} />}
           </span>
           <span>
-            <img src="/images/site/Logo.svg" alt="Little Lemon Logo" />
+            <Image
+              src="/images/site/Logo.svg"
+              alt="Little Lemon Logo"
+              width={160}
+              height={160}
+            />
           </span>
           <span>
             <BasketIcon />
