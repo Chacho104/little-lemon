@@ -1,0 +1,24 @@
+.testimonials {
+  h1 {
+    font-size: 2rem;
+    color: #495e57;
+    text-align: center;
+    padding: 2rem 0;
+    // padding: 0 0.125rem 1.5rem;
+  }
+
+  p {
+    color: #495e57;
+    text-align: center;
+    line-height: 1.75;
+    font-size: 1.15rem;
+    // padding: 0 1rem;
+  }
+
+  .testimonials-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+  }
+}
