@@ -61,7 +61,7 @@ const MenuItemDetails: React.FC<MenuItemDetailsProps> = ({
           <ButtonAlt />
         </div>
         <div className={classes.details}>
-          <h2>What's in it</h2>
+          <h2>What&apos;s in it</h2>
           <p>{description}</p>
         </div>
         <div className={classes.customize}>
