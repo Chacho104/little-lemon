@@ -4,6 +4,8 @@ import AboutBrief from "@/components/home-page/AboutBrief";
 import MenuHighlight from "@/components/home-page/MenuHighlight";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { connectDatabase, getAllDocuments } from "@/helpers/db-util";
+import Head from "next/head";
+import Testimonials from "@/components/home-page/Testimonials";
 
 type Meal = {
   _id: string;
@@ -52,8 +54,16 @@ const HomePage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
+      <Head>
+        <title>Little Lemon</title>
+        <meta
+          name="description"
+          content="Order your favorite food online or reserve a table and come enjoy your favorite food in a place full of the warmth and joy of unmatchable hospitality."
+        />
+      </Head>
       <Hero />
       <MenuHighlight meals={meals} />
+      <Testimonials />
       <AboutBrief />
     </>
   );
