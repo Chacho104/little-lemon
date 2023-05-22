@@ -144,9 +144,10 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
                 <div role="group" aria-labelledby="my-radio-group">
                   <RadioCustomInput
                     name="userAgreement"
-                    children="You agree to our friendly privacy policy"
                     value="Agreed to privacy policy"
-                  />
+                  >
+                    You agree to our friendly privacy policy
+                  </RadioCustomInput>
                 </div>
                 <ErrorMessage name="userAgreement">
                   {(msg) => <div className={classes.error}>{msg}</div>}
