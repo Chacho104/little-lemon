@@ -18,21 +18,21 @@
 
   h1 {
     color: #f4ce14;
-    padding: 1rem 0;
-    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
     font-family: "Markazi Text", serif;
   }
 
   li {
     padding: 0.3rem 0;
     color: #ffffff;
-    font-size: 1.225rem;
+    font-size: 1.15rem;
     font-family: "Markazi Text", serif;
 
     a {
       padding: 0.3rem 0;
       color: #ffffff;
-      font-size: 1.225rem;
+      font-size: 1.15rem;
       font-family: "Markazi Text", serif;
 
       &:hover {
@@ -45,6 +45,7 @@
 .icon {
   font-size: 1.25rem;
   margin-right: 0.3rem;
+  color: #f4ce14;
 }
 
 .copyright {
