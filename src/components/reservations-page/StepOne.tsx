@@ -21,7 +21,7 @@ type StepOneProps = {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  phone: string | number;
   userAgreement: string;
 };
 
@@ -59,7 +59,7 @@ const StepOne: React.FC<StepOneProps> = (props) => {
           firstName: props.firstName,
           lastName: props.lastName,
           email: props.email,
-          phone: props.email,
+          phone: props.phone,
           userAgreement: props.userAgreement,
         }}
         validationSchema={Yup.object({
