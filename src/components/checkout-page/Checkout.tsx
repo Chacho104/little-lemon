@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import Basket from "./Basket";
-import Payment from "./Payment";
 import UserDetails from "./UserDetails";
+import DidSubmit from "../submission-statuses/DidSubmit";
+import IsSubmitting from "../submission-statuses/IsSubmitting";
+import SubmissionError from "../submission-statuses/SubmissionError";
+import { clearBasket } from "@/store/BasketSlice";
+import { useDispatch } from "react-redux";
 
 const Checkout: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [didSubmit, setDidSubmit] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+
   const [formData, setFormData] = useState({
     cutlery: false,
     userName: "",
@@ -14,8 +22,33 @@ const Checkout: React.FC = () => {
 
   const [currentStep, setCurrentStep] = useState<number>(0);
 
-  const makeRequest = (allFormData: any) => {
-    console.log("Form submitted", allFormData);
+  const dispatch = useDispatch();
+
+  const tryAgain = () => {
+    setCurrentStep(0);
+  };
+
+  const refreshPage = () => {
+    dispatch(clearBasket());
+    setCurrentStep(0);
+  };
+
+  const makeRequest = async (allFormData: any) => {
+    setIsSubmitting(true);
+    const response = await fetch("/api/orders", {
+      method: "POST",
+      body: JSON.stringify({ orderDetails: allFormData }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!response.ok) {
+      setIsSubmitting(false);
+      setError(true);
+    } else {
+      setError(false);
+      setIsSubmitting(false);
+      setDidSubmit(true);
+    }
   };
 
   const handleNextStep = (newData: any, final: boolean = false) => {
@@ -23,7 +56,6 @@ const Checkout: React.FC = () => {
 
     if (final) {
       makeRequest(newData);
-      return;
     }
     setCurrentStep((prev) => prev + 1);
   };
@@ -32,6 +64,27 @@ const Checkout: React.FC = () => {
     setFormData((prev) => ({ ...prev, ...newData }));
     setCurrentStep((prev) => prev - 1);
   };
+
+  const FinalStep = (
+    <>
+      {isSubmitting && !error && (
+        <IsSubmitting message="Processing your order..." />
+      )}
+      {!isSubmitting && !error && didSubmit && (
+        <DidSubmit
+          message="You have successfully placed your order. We shall swiftly process and deliver it to your doorstep."
+          regards="Thank you!"
+          onClick={refreshPage}
+        />
+      )}
+      {error && (
+        <SubmissionError
+          message="Sorry, we could not process your order for some reason."
+          onClick={tryAgain}
+        />
+      )}
+    </>
+  );
 
   const steps = [
     <Basket
@@ -51,7 +104,7 @@ const Checkout: React.FC = () => {
       street={formData.street}
       apartment={formData.apartment}
     />,
-    <Payment />,
+    FinalStep,
   ];
 
   return <>{steps[currentStep]}</>;
