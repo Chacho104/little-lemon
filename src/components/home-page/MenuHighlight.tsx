@@ -21,7 +21,7 @@ const MenuHighlight: React.FC<MenuHighlightProps> = ({ meals }) => {
   return (
     <section>
       <div className={classes.title}>
-        <h1>This Week's Specials!</h1>
+        <h1>This Week&apos;s Specials!</h1>
         <p>
           Order our specials for the week or check out our full{" "}
           <Link href="/menu">online menu</Link>
