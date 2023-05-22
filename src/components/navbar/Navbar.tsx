@@ -22,9 +22,9 @@ const Navbar: React.FC = () => {
     <>
       <header className={classes.header}>
         <nav className={classes.nav}>
-          <span>
+          <Link href="/">
             <img src="/images/site/Logo.svg" alt="Little Lemon logo" />
-          </span>
+          </Link>
           <ul>
             <li>
               <Link
