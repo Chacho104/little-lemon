@@ -41,10 +41,9 @@ const Basket: React.FC<BasketProps> = (props) => {
         <div className={classes["empty-basket"]}>
           <h1>Order Summary</h1>
           <p>
-            You have not added any food or drink items to your basket. Please go
-            to <Link href="/menu">menu</Link> to start filling your basket with
-            our delicious portions! Once you have added an item to basket, the
-            order summary will appear here.
+            Your basket is empty! Please go to <Link href="/menu">menu</Link> to
+            start filling your basket with our delicious portions! Once you have
+            added items to basket, your order summary will appear here.
           </p>
         </div>
       )}
