@@ -6,6 +6,7 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { SlPhone, SlEnvelopeOpen } from "react-icons/sl";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +15,12 @@ const Footer: React.FC = () => {
         <nav className={classes.bottNav}>
           <section className={classes.logo}>
             <Link href="/">
-              <img src="/images/site/Logo.svg" alt="Little Lemon Logo" />
+              <Image
+                src="/images/site/Logo.svg"
+                alt="Little Lemon Logo"
+                width={160}
+                height={160}
+              />
             </Link>
           </section>
           <section className={classes.item}>
@@ -60,19 +66,19 @@ const Footer: React.FC = () => {
             <h1>Social Media Links</h1>
             <ul>
               <li>
-                <a href="littlelemon@instagram.com">
+                <Link href="littlelemon@instagram.com">
                   <BsInstagram className={classes.icon} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="littlelemon@facebook.com">
+                <Link href="littlelemon@facebook.com">
                   <BsFacebook className={classes.icon} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="littlelemon@twitter.com">
+                <Link href="littlelemon@twitter.com">
                   <BsTwitter className={classes.icon} />
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
