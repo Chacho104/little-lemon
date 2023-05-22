@@ -53,10 +53,16 @@ const MenuItemDetails: React.FC<MenuItemDetailsProps> = ({
             <BsArrowLeft />
           </button>
         </div>
-        <div className={classes.details}>
-          <h2>{title}</h2>
-          <p>{description}</p>
+        <div className={classes.header}>
+          <div className={classes["title-price"]}>
+            <h2>{title}</h2>
+            <span>${price}</span>
+          </div>
           <ButtonAlt />
+        </div>
+        <div className={classes.details}>
+          <h2>What's in it</h2>
+          <p>{description}</p>
         </div>
         <div className={classes.customize}>
           <MenuItemForm id={id} onAddToCart={addToCartHandler} />
