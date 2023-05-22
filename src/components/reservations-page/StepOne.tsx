@@ -136,16 +136,12 @@ const StepOne: React.FC<StepOneProps> = (props) => {
                   Seating Area
                 </div>
                 <div role="group" aria-labelledby="my-radio-group">
-                  <RadioCustomInput
-                    name="seatingArea"
-                    children="Indoor seating"
-                    value="Indoor seating"
-                  />
-                  <RadioCustomInput
-                    name="seatingArea"
-                    children="Outdoor seating"
-                    value="Outdoor seating"
-                  />
+                  <RadioCustomInput name="seatingArea" value="Indoor seating">
+                    Indoor seating
+                  </RadioCustomInput>
+                  <RadioCustomInput name="seatingArea" value="Outdoor seating">
+                    Outdoor seating
+                  </RadioCustomInput>
                 </div>
                 <ErrorMessage name="seatingArea">
                   {(msg) => <div className={classes.error}>{msg}</div>}
