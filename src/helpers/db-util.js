@@ -6,6 +6,14 @@ export async function connectDatabase() {
   return client;
 }
 
+export async function insertDocument(client, database, collection, document) {
+  const db = client.db(database);
+
+  const result = await db.collection(collection).insertOne(document);
+
+  return result;
+}
+
 export async function getAllDocuments(
   client,
   database,
