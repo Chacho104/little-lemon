@@ -78,3 +78,46 @@ main {
     }
   }
 }
+
+/* Form Submission Status components Styles*/
+.booking {
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  border: 1px solid #495e57;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h2 {
+    color: #333;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    color: #495e57;
+    line-height: 1.75;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .refresh,
+  a {
+    cursor: pointer;
+    color: #495e57;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+
+    &:hover {
+      color: #f4ce14;
+    }
+  }
+
+  .action {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
