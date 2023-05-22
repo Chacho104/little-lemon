@@ -1,5 +1,5 @@
 import { ErrorMessage, Form, Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import classes from "./StepTwo.module.scss";
 import Image from "next/image";
 import Button from "../ui/Button";
@@ -22,7 +22,7 @@ type StepTwoProps = {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  phone: string | number;
   userAgreement: string;
 };
 
@@ -62,8 +62,10 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
             .required("Please enter your phone number"),
           userAgreement: Yup.string().required("This field is required"),
         })}
-        onSubmit={(values) => {
-          props.next(values, true);
+        onSubmit={async (values, { setSubmitting }) => {
+          setSubmitting(true);
+          await props.next(values, true);
+          setSubmitting(false);
         }}
       >
         {({ values }) => (
@@ -197,6 +199,7 @@ const StepTwo: React.FC<StepTwoProps> = (props) => {
       </Formik>
     </>
   );
+
   return <>{personalDetailsForm}</>;
 };
 export default StepTwo;
