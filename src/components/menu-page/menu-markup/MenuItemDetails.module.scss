@@ -46,19 +46,41 @@
     }
   }
 
-  .details {
+  .header {
     padding: 1.5rem 2rem 0rem;
 
     @media screen and (max-width: 690px) {
       padding: 1.5rem 1rem 0rem;
     }
 
+    .title-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: #ee9972;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .details {
+    padding: 0 2rem 1rem;
+
+    @media screen and (max-width: 690px) {
+      padding: 0 1rem;
+    }
+
     h2 {
       margin-bottom: 0.75rem;
+      color: #495e57;
     }
 
     p {
       color: #495e57;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #edefee;
     }
   }
 }
