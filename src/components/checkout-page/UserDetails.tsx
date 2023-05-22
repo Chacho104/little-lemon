@@ -50,8 +50,10 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
             .max(20, "Must be 20 characters or less")
             .required("Please enter name of your apartment"),
         })}
-        onSubmit={(values) => {
-          props.next(values);
+        onSubmit={async (values, { setSubmitting }) => {
+          setSubmitting(true);
+          await props.next(values, true);
+          setSubmitting(false);
         }}
       >
         {({ values }) => (
