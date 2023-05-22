@@ -88,6 +88,7 @@ const Checkout: React.FC = () => {
 
   const steps = [
     <Basket
+      key="checkout-step-one"
       next={handleNextStep}
       cutlery={formData.cutlery}
       userName={formData.userName}
@@ -96,6 +97,7 @@ const Checkout: React.FC = () => {
       apartment={formData.apartment}
     />,
     <UserDetails
+      key="checkout-step-two"
       prev={handlePrevStep}
       next={handleNextStep}
       cutlery={formData.cutlery}
