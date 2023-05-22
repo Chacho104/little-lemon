@@ -3,6 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 import React from "react";
 import { InferGetStaticPropsType, GetStaticProps } from "next";
 import { connectDatabase, getAllDocuments } from "../../helpers/db-util";
+import Head from "next/head";
 
 type Meal = {
   _id: string;
@@ -45,6 +46,13 @@ const MenuPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
+      <Head>
+        <title>The Menu</title>
+        <meta
+          name="description"
+          content="Browse all the meals available at Little Lemon and make an online order or visit the closest branch to enjoy the delicacies!"
+        />
+      </Head>
       <PageHero image="/images/site/menuhero.jpg" alt="Table full of food" />
       <MenuDisplay
         title="Order for Delivery"
