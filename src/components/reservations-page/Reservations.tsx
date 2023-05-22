@@ -97,6 +97,7 @@ const Reservations: React.FC = () => {
   );
   const steps = [
     <StepOne
+      key="reservations-step-one"
       next={handleNextStep}
       date={formData.date}
       noOfDiners={formData.noOfDiners}
@@ -110,6 +111,7 @@ const Reservations: React.FC = () => {
       userAgreement={formData.userAgreement}
     />,
     <StepTwo
+      key="reservations-step-two"
       next={handleNextStep}
       prev={handlePrevStep}
       date={formData.date}
