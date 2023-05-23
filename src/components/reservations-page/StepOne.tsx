@@ -96,6 +96,7 @@ const StepOne: React.FC<StepOneProps> = (props) => {
                   label={dateLabel}
                   id="date"
                   type="date"
+                  placeholder="dd/mm/yy"
                 />
                 <CustomInput
                   label={dinersLabel}
