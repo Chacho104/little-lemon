@@ -106,8 +106,8 @@ const Navbar: React.FC = () => {
             <Image
               src="/images/site/Logo.svg"
               alt="Little Lemon Logo"
-              width={160}
-              height={160}
+              width={140}
+              height={80}
             />
           </span>
           <span>
