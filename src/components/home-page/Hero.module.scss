@@ -3,6 +3,18 @@
   height: 27rem;
   margin-bottom: 8rem;
 
+  @media screen and (max-width: 910px) {
+    margin-bottom: 5rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    height: 33rem;
+  }
+
   .hero {
     height: 100%;
     display: flex;
@@ -11,16 +23,27 @@
       width: 70%;
       margin-top: 3.5rem;
 
+      @media screen and (max-width: 535px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
       h1 {
         color: #f4ce14;
-        font-family: "Markazi Text", serif;
-        font-size: 4rem;
+        font-family: "Markazi Text", sans-serif;
+        font-size: 3rem;
       }
 
       h2 {
         color: #ffffff;
-        font-family: "Markazi Text", serif;
-        font-size: 2.5rem;
+        font-family: "Markazi Text", sans-serif;
+        font-size: 2rem;
+        padding: 1rem 0;
       }
 
       p {
@@ -29,7 +52,12 @@
         font-family: "Karla", sans-serif;
         font-size: 1.125rem;
         line-height: 1.5;
-        margin: 0.5rem 0 2rem 0;
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 535px) {
+          width: 100%;
+          padding: 0 1rem;
+        }
       }
     }
   }
@@ -37,48 +65,14 @@
     width: 30%;
     margin-top: 3.5rem;
 
+    @media screen and (max-width: 535px) {
+      display: none;
+    }
+
     img {
       width: 100%;
       height: auto;
       border-radius: 1.5rem;
     }
-  }
-}
-
-@media screen and (max-width: 910px) {
-  .hero-section {
-    margin-bottom: 5rem;
-  }
-}
-
-@media screen and (max-width: 535px) {
-  .image {
-    display: none;
-  }
-
-  .hero-section {
-    .hero {
-      .content {
-        width: 100%;
-        text-align: center;
-
-        p {
-          width: 100%;
-          padding: 0 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .hero-section {
-    margin-bottom: 3rem;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .hero-section {
-    height: 33rem;
   }
 }
