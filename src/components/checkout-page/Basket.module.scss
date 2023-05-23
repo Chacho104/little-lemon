@@ -1,6 +1,6 @@
 .basket {
   height: auto;
-  min-height: 48vh;
+  min-height: calc(100vh - 9rem);
   border-radius: 2rem;
   border: 1px solid #495e57;
   margin-top: 2rem;
@@ -8,6 +8,7 @@
 
   @media screen and (max-width: 690px) {
     margin-top: 1rem;
+    min-height: calc(100vh - 7rem);
   }
 
   .empty-basket {
