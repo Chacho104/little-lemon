@@ -15,9 +15,9 @@ const About: React.FC = () => {
         <p>
           Little Lemon (co-founded by Mario Stefano and Adrian Demphris) is a
           vibrant Chicago restaturant focused on serving traditional recipes in
-          a modern setting. Little Lemon celebrates the best of traditional
-          Mediterranean dishes with irresistible hospitality and service. You
-          can enjoy our dishes wherever you are through the swift and reliable{" "}
+          a modern setting. We celebrate the best of traditional Mediterranean
+          dishes with irresistible hospitality and service. You can enjoy our
+          dishes wherever you are through the swift and reliable{" "}
           <Link href="/menu">order online service,</Link> or secure a table at
           the restaurant through the{" "}
           <Link href="/reservations">reserve a table</Link> feature. Most
