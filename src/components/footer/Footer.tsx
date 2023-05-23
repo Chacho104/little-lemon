@@ -2,12 +2,9 @@ import React from "react";
 
 import classes from "./Footer.module.scss";
 
-import { TfiLocationPin } from "react-icons/tfi";
-import { SlPhone, SlEnvelopeOpen } from "react-icons/sl";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
-import Image from "next/image";
-import Button from "../ui/Button";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -30,6 +27,11 @@ const Footer: React.FC = () => {
                 <BsTwitter className={classes.icon} />
               </Link>
             </li>
+            <li>
+              <Link href="littlelemon@tiktok.com">
+                <FaTiktok className={classes.icon} />
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={classes.links}>
@@ -47,9 +49,6 @@ const Footer: React.FC = () => {
               <Link href="/privacy">Privacy</Link>
             </li>
           </ul>
-        </div>
-        <div>
-          <Button>Newsletter Registeration</Button>
         </div>
       </div>
       <div className={classes.copyright}>
