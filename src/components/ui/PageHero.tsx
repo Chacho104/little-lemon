@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./PageHero.module.scss";
+import Image from "next/image";
 
 type PageHeroProps = {
   image: string;
@@ -9,7 +10,7 @@ type PageHeroProps = {
 const PageHero: React.FC<PageHeroProps> = ({ image, alt }) => {
   return (
     <section className={classes.hero}>
-      <img src={image} alt={alt} />
+      <Image src={image} alt={alt} width={900} height={600} />
     </section>
   );
 };
