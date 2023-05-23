@@ -123,7 +123,7 @@ const StepOne: React.FC<StepOneProps> = (props) => {
                   id="occasion"
                   as="select"
                 >
-                  <option value="">Occasion</option>
+                  <option value="">Select Occasion</option>
                   <option value="Birthday">Birthday</option>
                   <option value="Engagement">Engagement</option>
                   <option value="Anniversary">Anniversary</option>
