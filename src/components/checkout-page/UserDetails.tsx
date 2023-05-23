@@ -97,7 +97,7 @@ const UserDetails: React.FC<UserDetailsProps> = (props) => {
                   props.prev(values);
                 }}
               >
-                Edit Order
+                Edit
               </Button>
               <Button type="submit">Proceed</Button>
             </div>
