@@ -89,6 +89,8 @@ main {
   margin-top: 2rem;
   padding: 2rem 1rem;
   border: 1px solid #495e57;
+  height: auto;
+  min-height: calc(100vh - 9rem);
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -96,6 +98,7 @@ main {
 
   @media screen and (max-width: 690px) {
     margin-top: 1rem;
+    min-height: calc(100vh - 7rem);
   }
 
   h2 {
