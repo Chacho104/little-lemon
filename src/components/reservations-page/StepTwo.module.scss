@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: 1px solid #8b8d8b;
 
   .order-details {
     @media screen and (max-width: 690px) {
@@ -81,7 +82,7 @@
 
   @media screen and (max-width: 690px) {
     background-color: #495e57;
-    padding: 0.5rem 0 2rem;
+    padding: 0 0 2rem;
   }
 
   .content {
