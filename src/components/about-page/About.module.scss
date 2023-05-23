@@ -4,6 +4,10 @@
     font-size: 2rem;
     color: #495e57;
     text-align: center;
+
+    @media screen and (max-width: 690px) {
+      margin: 1rem 0;
+    }
   }
 
   .description {
@@ -99,10 +103,10 @@
       }
 
       .icon {
-        color: #495e57;
+        color: #f79327;
         font-size: 1.25rem;
         margin-right: 0.4rem;
-        font-weight: 600;
+        font-weight: 800;
       }
 
       span {
@@ -115,7 +119,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 
     @media screen and (max-width: 910px) {
       flex-wrap: wrap;
